@@ -295,22 +295,21 @@ textarea:valid {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 2;
     position: relative; /* важно для позиционирования */
 }
 
 .qualifications li::before {
-    content: '';
-    position: absolute;
-    left: -30px; /* отступ от текста */
-    width: 20px;
-    height: 20px;
-    background-color: #eafbf5;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="%23eafbf5"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="%2327ae60"/></svg>') no-repeat center;
+  background-size: contain;
 }
+
 
 
 
@@ -851,6 +850,7 @@ a {
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 30px;
         border: 3px solid #30383d;
     }
 
@@ -868,6 +868,26 @@ a {
     .about-content p {
         font-size: 1.3rem;
         margin-bottom: 15px;
+    }
+
+    .qualifications li {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 2;
+    position: relative;
+    }
+
+    .qualifications li::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="%23eafbf5"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="%2327ae60"/></svg>') no-repeat center;
+    background-size: contain;
     }
 
     /* 6. Сетка услуг */
