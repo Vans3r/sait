@@ -1036,3 +1036,368 @@ a {
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 400px) {
+  /* 1. Контейнер */
+  .container {
+    width: 100%;
+    padding: 0 10px; /* Минимальные отступы по краям */
+  }
+
+  /* 2. Шапка */
+  .header {
+    padding: 6px 0; /* Уменьшаем вертикальные отступы */
+  }
+
+  .logo h1 {
+    font-size: 1.8rem; /* Ещё меньше заголовок */
+    text-align: center;
+  }
+
+  .logo span {
+    font-size: 1rem; /* Уменьшаем подзаголовок */
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Меньше пространства между пунктами */
+    margin-top: 8px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Текст меню чуть меньше */
+    text-align: center;
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  /* 3. Модальное окно */
+  .modal-content {
+    padding: 20px; /* Уменьшаем внутренние отступы */
+    width: 95%; /* Почти на всю ширину */
+    border-radius: 12px; /* Менее скруглённые углы */
+    max-width: none; /* Снимаем ограничение по ширине */
+  }
+
+  .modal-content h3 {
+    font-size: 1.8rem; /* Уменьшаем заголовок формы */
+    margin: 0 0 20px 0;
+  }
+
+  .close {
+    right: 12px;
+    top: 12px;
+    font-size: 22px; /* Уменьшаем крестик */
+  }
+
+  /* 4. Форма внутри модального окна */
+  .form-group {
+    margin-bottom: 16px; /* Меньше пространства между полями */
+  }
+
+  .form-group label {
+    font-size: 1rem; /* Подписи чуть меньше */
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 14px; /* Поля ввода компактнее */
+    font-size: 1rem;
+  }
+
+  .btn-submit {
+    font-size: 1.1rem; /* Текст кнопки меньше */
+    padding: 14px 0; /* Отступы кнопки */
+  }
+
+  .success-message {
+    padding: 12px; /* Меньше отступы в сообщении */
+    font-size: 1rem; /* Размер текста */
+  }
+
+  /* 5. Блок «Об адвокате» */
+  .about-content {
+    flex-direction: column;
+    gap: 15px; /* Меньше расстояния между фото и текстом */
+    padding: 0 5px; /* Минимум отступов */
+    margin-top: -5px;
+  }
+
+  .profile-img {
+    width: 100%; /* Фото на всю ширину */
+    max-width: 250px; /* Ограничиваем максимальную ширину */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 2px solid #30383d; /* Тоньше рамка */
+  }
+
+  .about-content > div {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 0 5px; /* Отступы для текста */
+  }
+
+  .about-content h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.6rem; /* Заголовок раздела */
+  }
+
+  .about-content p {
+    font-size: 1.2rem; /* Текст чуть меньше */
+    margin-bottom: 12px;
+  }
+
+  .qualifications li {
+    text-align: left;
+    margin-bottom: 12px;
+    font-size: 1.2rem; /* Список меньше */
+    line-height: 1.8;
+  }
+
+  .qualifications li::before {
+    left: -30px; /* Сдвигаем маркер ближе */
+    top: 3px;
+  }
+
+  /* 6. Сетка услуг */
+  .services-grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 15px; /* Меньше расстояния */
+  }
+
+  .service-card {
+    padding: 16px; /* Компактнее карточки */
+    border-radius: 8px; /* Менее скруглённые */
+  }
+
+  .service-card h4 {
+    font-size: 1.2rem; /* Заголовки меньше */
+  }
+
+  .service-card p {
+    font-size: 0.95rem; /* Текст меньше */
+  }
+
+  /* 7. Примеры дел */
+  .cases-grid {
+    grid-template-columns: 1fr;
+    gap: 12px; /* Ещё компактнее */
+  }
+
+  .case-item {
+    padding: 12px 16px; /* Меньше отступов */
+    border-radius: 6px; /* Углы менее скруглённые */
+  }
+
+  .case-item h4 {
+    font-size: 1.1rem; /* Заголовки чуть меньше */
+  }
+
+  .case-item p {
+    font-size: 0.95rem; /* Текст компактнее */
+  }
+
+  /* 8. Контакты */
+  .contact-info {
+    max-width: 100%;
+    padding: 0 5px; /* Минимум отступов */
+  }
+
+  .contact-info p {
+    font-size: 1rem; /* Текст контактов меньше */
+    margin-bottom: 14px;
+  }
+
+  /* 9. Футер */
+  .footer {
+    padding: 30px 0 20px; /* Меньше вертикальных отступов */
+    margin-top: 60px; /* Меньше отступа сверху */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* Одна колонка в футере */
+    gap: 20px; /* Компактные расстояния */
+  }
+
+  .footer-section h4 {
+    font-size: 1.3rem; /* Заголовки футера меньше */
+    text-align: center;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 1rem; /* Текст футера */
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 10px; /* Ближе иконки */
+  }
+
+  .social-links a {
+    width: 32px; /* Иконки меньше */
+    height: 32px;
+    font-size: 0.9rem; /* Текст внутри иконок */
+  }
+
+  .copyright {
+    font-size: 0.85rem; /* Самый мелкий текст копирайта */
+    padding: 12px 0; /* Меньше отступов */
+  }
+
+  /* 10. Основные секции контента */
+  .section {
+    padding: 30px 0; /* Меньше отступов у секций */
+  }
+
+  .section h2 {
+    font-size: 1.8rem; /* Крупные заголовки */
+    margin-bottom: 20px;
+  }
+
+  .section h3 {
+    font-size: 1.5rem; /* Средние заголовки */
+    margin-bottom: 16px;
+  }
+
+  .section p {
+    font-size: 1.2rem; /* Основной текст */
+  }
+
+  /* 11. Кнопка в основном контенте */
+  .btn {
+    padding: 12px 24px; /* Компактная кнопка */
+    font-size: 1rem; /* Текст кнопки */
+    width:  100%; /* На всю ширину */
+  }
+
+  /* 12. Типографика */
+  ul, ol {
+    margin-left: 16px; /* Меньше отступ слева */
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin-bottom: 8px; /* Компактнее список */
+    font-size: 1rem; /* Размер текста */
+    line-height: 1.5;
+  }
+
+  blockquote {
+    margin: 16px 0; /* Меньше отступов */
+    padding: 12px 16px; /* Компактные отступы */
+    border-left: 3px solid #3498db; /* Тоньше линия */
+    font-size: 0.95rem; /* Текст цитаты */
+  }
+
+  /* 13. Стили для блока контактов внизу вкладки */
+  .contact-footer {
+    padding: 16px; /* Меньше внутренних отступов */
+    margin-top: 60px; /* Уменьшаем отступ сверху */
+    border-radius: 6px; /* Менее скруглённые углы */
+  }
+
+  .contact-footer h4 {
+    font-size: 1.2rem; /* Заголовок меньше */
+    margin: 0 0 10px 0;
+  }
+
+  .contact-footer li {
+    margin-bottom: 8px; /* Ближе пункты списка */
+  }
+
+  /* 14. Стили для примеров дел (дополнительно) */
+  .case-item:hover {
+    transform: none; /* Убираем смещение при наведении — может мешать на маленьких экранах */
+  }
+
+  /* 15. Дополнительные корректировки для форм */
+  .form-group textarea {
+    min-height: 80px; /* Меньше высота текстового поля */
+    padding-top: 10px;
+  }
+
+  /* 16. Стили для кнопок в контенте */
+  .btn:hover {
+    transform: none; /* Отключаем подъём кнопки — может вызывать проблемы на сенсорных экранах */
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2); /* Оставляем тень */
+  }
+
+  /* 17. Корректировка модального окна при фокусе */
+  .btn-submit:focus,
+  .nav-link:focus {
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Меньше радиус фокуса */
+  }
+
+  /* 18. Оптимизация сетки */
+  .about-content {
+    align-items: stretch; /* Растягиваем элементы по высоте */
+  }
+
+  .text-about {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  /* 19. Корректировка футера */
+  .footer-section {
+    text-align: center; /* Центрируем содержимое секций футера */
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem; /* Мелкий текст в подвале */
+    padding-top: 12px;
+  }
+
+  /* 20. Оптимизация для очень узких экранов */
+  body {
+    font-size: 1.8rem; /* Базовый размер текста — сохраняем читаемость */
+  }
+
+  html {
+    font-size: 75%; /* Немного уменьшаем базовый размер шрифта */
+  }
+
+  /* 21. Корректировка заголовков секций */
+  .section h2 {
+    line-height: 1.2; /* Уплотняем строки */
+  }
+
+  .section h3 {
+    line-height: 1.2;
+  }
+
+  /* 22. Оптимизация навигации */
+  #mainNav {
+    text-align: center;
+  }
+
+  /* 23. Корректировка валидации форм */
+  input:invalid:not(:placeholder-shown),
+  textarea:invalid:not(:placeholder-shown) {
+    animation: none; /* Отключаем анимацию тряски — может раздражать на мобильных */
+    border-color: #e74c3c;
+  }
+
+  /* 24. Оптимизация социальных ссылок */
+  .social-links {
+    flex-wrap: wrap; /* Разрешаем перенос иконок */
+    justify-content: center;
+  }
+
+  .social-links a {
+    margin: 4px; /* Добавляем небольшие отступы между иконками */
+  }
+}
