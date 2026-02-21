@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <footer class="footer">
                         <h4>Контакты</h4>
                         <ul>
-                            <li><strong>Телефон:</strong> +7 (994) 066-00-15</li>
+                            <li><strong>Телефон:</strong> +7 (909) 806-63-79</li>
                             <li><strong>Email:</strong>  igorbasitch@yandex.ru</li>
                             <li><strong>Режим работы:</strong> Пн–Сб 9:00–20:00</li>
                         </ul>
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <footer class="footer">
                         <h4>Контакты</h4>
                         <ul>
-                            <li><strong>Телефон:</strong> +7 (994) 066-00-15</li>
+                            <li><strong>Телефон:</strong> +7 (909) 806-63-79</li>
                             <li><strong>Email:</strong>  igorbasitch@yandex.ru</li>
                             <li><strong>Режим работы:</strong> Пн–Сб 9:00–20:00</li>
                         </ul>
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <footer class="footer">
                         <h4>Контакты</h4>
                         <ul>
-                            <li><strong>Телефон:</strong> +7 (994) 066-00-15</li>
+                            <li><strong>Телефон:</strong> +7 (909) 806-63-79</li>
                             <li><strong>Email:</strong>  igorbasitch@yandex.ru</li>
                             <li><strong>Режим работы:</strong> Пн–Сб 9:00–20:00</li>
                         </ul>
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <footer class="footer">
                         <h4>Контакты</h4>
                         <ul>
-                            <li><strong>Телефон:</strong> +7 (994) 066-00-15</li>
+                            <li><strong>Телефон:</strong> +7 (909) 806-63-79</li>
                             <li><strong>Email:</strong>  igorbasitch@yandex.ru</li>
                             <li><strong>Режим работы:</strong> Пн–Сб 9:00–20:00</li>
                         </ul>
