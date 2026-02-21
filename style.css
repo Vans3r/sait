@@ -1037,7 +1037,7 @@ a {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   /* 1. Контейнер */
   .container {
     width: 100%;
