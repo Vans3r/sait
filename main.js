@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
+    let isSending = false; // Флаг отправки
+    let lastSubmitTime = 0;  // Время последней успешной отправки
+    const MIN_SUBMIT_INTERVAL = 600000; // Минимум 10 секунд между отправками
+
     // Содержимое разделов сайта
     const sections = {
         home: `
@@ -45,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Высшее юридическое образование</li>
                                 <li>1992–2004 — работа в следственном отделе МВД РФ</li>
                                 <li>Адвокатская деятельность с 2005 года</li>
-                                <li>Регистрационный номер в едином государственном реестре адвокатов —  *****</li>
-                                <li>Удостоверение №*****</li>
+                                <li>Регистрационный номер в едином государственном реестре адвокатов —  27/1369</li>
+                                <li>Удостоверение №1728</li>
                             </ul>
                         </div>
                     </div>
@@ -252,13 +256,18 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Проверка валидности
+            const currentTime = Date.now();
+            if (currentTime - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
+                const remaining = Math.ceil((MIN_SUBMIT_INTERVAL - (currentTime - lastSubmitTime)) / 1000);
+                alert(`Пожалуйста, подождите ${remaining} секунд перед повторной отправкой.`);
+                return;
+                }
+
             if (!form.checkValidity()) {
                 alert('Заполните все поля!');
                 return;
             }
-
-            // Собираем данные
+  
             const formData = new FormData(form);
             const data = Object.fromEntries(formData);
 
@@ -275,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         setTimeout(() => {
                             modal.style.display = 'none';
                             successMessage.style.display = 'none';
-                        }, 3000);
+                        }, 1000);
                     })
                     .catch((error) => {
                         console.error('❌ Ошибка отправки:', error);
@@ -283,24 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
             });
         }
-
-    // Инициализация EmailJS (замените YOUR_USER_ID на ваш реальный ID)
     emailjs.init("WyriUZli-kydnePGL");
-
-    // Дополнительные меры безопасности:
-    // 1. Блокируем повторную отправку во время обработки
-    let isSending = false;
-    form.addEventListener('submit', (e) => {
-        if (isSending) {
-            e.preventDefault();
-            return;
-        }
-        isSending = true;
-        // ... остальной код отправки ...
-        // В конце: isSending = false;
-    });
-
-    // 2. Добавляем индикатор загрузки (опционально)
     const btnSubmit = form.querySelector('.btn-submit');
     form.addEventListener('submit', () => {
         btnSubmit.textContent = 'Отправляется...';
